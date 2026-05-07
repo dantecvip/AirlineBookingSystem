@@ -209,10 +209,6 @@ FakesAssemblies/
 # JetBrains Rider
 *.sln.iml
 
-# ==========================================
-# ASP.NET Core appsettings
-# ==========================================
-
 # Ignore all real appsettings files
 **/appsettings.json
 **/appsettings.*.json

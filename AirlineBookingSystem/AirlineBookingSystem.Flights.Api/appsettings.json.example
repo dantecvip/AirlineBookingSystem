@@ -1,12 +1,8 @@
 {
-  "EventBusSettings": {
-    "Host": "rabbitmq.example.com",
-    "User": "user",
-    "Password": "password",
-    "VirtualHost": "/"
-  },
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=localhost;Initial Catalog=MyDb;User ID=user;Password=password;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+  "DatabaseSettings": {
+    "ConnectionString": "mongodb+srv://user:Pass%40123@test-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000",
+    "DatabaseName": "FlightsDb",
+    "CollectionName": "Flights"
   },
   "Logging": {
     "LogLevel": {
