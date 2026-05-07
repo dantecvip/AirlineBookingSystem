@@ -1,0 +1,18 @@
+{
+  "EventBusSettings": {
+    "Host": "rabbitmq.example.com",
+    "User": "user",
+    "Password": "password",
+    "VirtualHost": "/"
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=localhost;Initial Catalog=MyDb;User ID=user;Password=password;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
