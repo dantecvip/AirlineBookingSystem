@@ -5,8 +5,8 @@
     "Password": "password",
     "VirtualHost": "/"
   },
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=localhost;Initial Catalog=MyDb;User ID=user;Password=password;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+  "CacheSettings": {
+    "ConnectionString": "seu-redis.region.redis.azure.net:10000,password=SUA_CHAVE_AQUI,ssl=True,abortConnect=False"
   },
   "Logging": {
     "LogLevel": {

@@ -4,8 +4,7 @@ using AirlineBookingSystem.Bookings.Core.Repositories;
 using AirlineBookingSystem.Bookings.Infrastructure.Repositories;
 using AirlineBookingSystem.BuildingBlocks.Common;
 using MassTransit;
-using Microsoft.Data.SqlClient;
-using System.Data;
+using StackExchange.Redis;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +24,11 @@ var assemblies = new Assembly[]
 };
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies));
+
+// Redis
+var redisConfiguration = builder.Configuration["CacheSettings:ConnectionString"];
+var redis = await ConnectionMultiplexer.ConnectAsync(redisConfiguration);
+builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
 
 // Application Services
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
@@ -48,10 +52,6 @@ builder.Services.AddMassTransit(config =>
         });
     });
 });
-
-// Add Sql Connection
-builder.Services.AddScoped<IDbConnection>(sp =>
-    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
