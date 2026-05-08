@@ -6,7 +6,7 @@
     "VirtualHost": "/"
   },
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=localhost;Initial Catalog=MyDb;User ID=user;Password=password;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+    "PostgresConnection": "Host=SEU_SERVIDOR_AQUI.postgres.database.azure.com;Port=5432;Database=PaymentDb;Username=SEU_USUARIO_AQUI;Password=SUA_SENHA_AQUI"
   },
   "Logging": {
     "LogLevel": {
